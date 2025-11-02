@@ -6,6 +6,7 @@ const loginUserValidator = vine.compile(
   vine.object({
     email: vine.string().email().maxLength(254),
     password: vine.string().minLength(6).maxLength(180),
+    remember: vine.boolean().optional(),
   })
 )
 
@@ -38,7 +39,7 @@ export default class AuthController {
 
     const user = await User.verifyCredentials(data.email, data.password)
 
-    await auth.use('web').login(user)
+    await auth.use('web').login(user, data.remember || false)
 
     return response.redirect().toRoute('home')
   }

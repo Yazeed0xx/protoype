@@ -20,10 +20,8 @@ createInertiaApp({
       import.meta.glob('../pages/**/*.tsx')
     )) as any
 
-    // Apply layout to all pages except auth pages (they should have their own styling)
-    if (!name.startsWith('auth/')) {
-      page.default.layout = (pageContent: any) => <Layout>{pageContent}</Layout>
-    }
+    // Apply layout to all pages
+    page.default.layout = (pageContent: any) => <Layout>{pageContent}</Layout>
 
     return page
   },
