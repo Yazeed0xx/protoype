@@ -13,7 +13,7 @@ export const BookFactory = factory
       cover: faker.image.url(),
       progress: faker.number.int({ min: 0, max: 100 }),
       description: faker.lorem.paragraph(),
-      rating: faker.number.float({ min: 0, max: 5, fractionDigits: 1 }),
+      rating: faker.number.int({ min: 0, max: 5 }),
       keyideas: faker.lorem.sentence(),
       status: faker.helpers.arrayElement(['reading', 'completed', 'want-to-read']),
       categoryId: category.id,
