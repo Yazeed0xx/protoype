@@ -51,7 +51,6 @@ export default function Login() {
     defaultValues: {
       email: '',
       password: '',
-      rememberMe: false,
     },
     mode: 'onBlur', // Validate on blur for better UX on login
   })
@@ -247,7 +246,7 @@ export default function Login() {
                     )}
                   />
 
-                  <div className="flex items-center justify-between animate-fade-in-up">
+                  {/* <div className="flex items-center justify-between animate-fade-in-up">
                     <FormField
                       control={form.control}
                       name="rememberMe"
@@ -272,7 +271,7 @@ export default function Login() {
                     >
                       Forgot password?
                     </Link>
-                  </div>
+                  </div> */}
 
                   <Button
                     type="submit"
@@ -297,14 +296,14 @@ export default function Login() {
                     <div className="absolute inset-0 flex items-center">
                       <Separator />
                     </div>
-                    <div className="relative flex justify-center text-xs uppercase">
+                    {/* <div className="relative flex justify-center text-xs uppercase">
                       <span className="bg-card px-2 text-muted-foreground">
                         Or continue with
                       </span>
-                    </div>
+                    </div> */}
                   </div>
 
-                  <div className="grid grid-cols-2 gap-3 animate-fade-in-up">
+                  {/* <div className="grid grid-cols-2 gap-3 animate-fade-in-up">
                     <Button
                       type="button"
                       variant="outline"
@@ -342,7 +341,7 @@ export default function Login() {
                       </svg>
                       GitHub
                     </Button>
-                  </div>
+                  </div> */}
 
                   <div className="text-center animate-fade-in-up">
                     <span className="text-muted-foreground">
